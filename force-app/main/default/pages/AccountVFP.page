@@ -1,0 +1,20 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlock title="Page Block Title">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save Me"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="My PageBlock Section" columns="2">
+                <apex:inputField value="{!Account.name}" required="false" onclick="clicked"/>
+                <apex:inputField value="{!Account.industry}"/>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="My PageBlock Section2" columns="2">
+                <apex:inputField value="{!Account.name}" required="false" onclick="clicked"/>
+                <apex:inputField value="{!Account.industry}"/>
+                
+            </apex:pageBlockSection>
+		</apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Accounts List WIRE 3" style="text-align:center ;" icon-name="custom:custom12">
+        <div>
+        <lightning-button label="CLICK to Fire Wire3"  onclick={fireHandler3}></lightning-button>
+            <template if:true={varAccList}>
+                <template for:each={varAccList} for:item="varAcc">
+                    <p key={varAcc.id}> {varAcc.Id} --- {varAcc.Name} --- {varAcc.Industry}</p>
+                </template>
+            </template>
+            <template if:true={error}>
+                {varAccList.error}
+            </template>
+        </div>
+    </lightning-card>
+</template>

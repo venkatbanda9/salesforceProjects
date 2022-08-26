@@ -1,0 +1,13 @@
+<apex:page controller="CustomVFPControllerClass">
+    <apex:form >
+    	<apex:pageBlock title="PageBlock Start">
+        	<apex:pageBlockSection title="PageBlock Section" columns="1">
+                <apex:outputLabel >Enter Name: </apex:outputLabel>
+                <apex:inputText value="{!UserName}"/>
+                <apex:commandButton Action="{!handleClick}" value="Submit"/>
+                <apex:outputLabel > {!dispMsg} </apex:outputLabel>
+                <apex:outputLabel > {!UserName} </apex:outputLabel>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

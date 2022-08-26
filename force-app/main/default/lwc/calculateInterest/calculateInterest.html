@@ -1,0 +1,14 @@
+<template>
+    <lightning-card label="Calculate Interest Utility" icon-name="custom:custom50">
+
+        <lightning-input type="number" label="Enter Principal Amt" onchange={principalHandler}></lightning-input>
+        <lightning-input type="number" label="Enter Duration" onchange={durationHandler}></lightning-input>
+        <lightning-input type="number" label="Enter ROI" onchange={roiHandler}></lightning-input>
+
+        <br><br>
+        <lightning-button label="Calculate" icon-position="center"  onclick={CalculateInterestHandler}></lightning-button>   
+        <br><br>
+        <lightning-formatted-text value={loanResult}></lightning-formatted-text>
+    </lightning-card>
+
+</template>

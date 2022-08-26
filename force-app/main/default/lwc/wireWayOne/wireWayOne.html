@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Accounts List Wire ONE" icon-name="custom:custom12">
+            <template if:true={varAccList.data}>
+                <template for:each={varAccList.data} for:item="varAcc">
+                    <p key={varAcc.id}> {varAcc.Id} --- {varAcc.Name} --- {varAcc.Industry}</p>
+                </template>
+            </template>
+            <template if:true={varAccList.error}>
+                {varAccList.error}
+            </template>
+    </lightning-card>
+</template>

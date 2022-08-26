@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Patient Info Entry Form" icon-name="custom:custom39">
+        <template if:true={boolValue}>
+            <lightning-input type="text" label="Enter First Name"></lightning-input>
+            <lightning-input type="text" label="Enter Last Name"></lightning-input>
+            <lightning-input type="text" label="Enter Mobile number"></lightning-input>
+            <lightning-input type="text" label="Enter email id"></lightning-input>
+            <lightning-input type="text" label="Enter CITY"></lightning-input>
+
+            <lightning-button label="HIDE FORM" onclick={hideFormHandler}></lightning-button>
+        </template>
+        
+        <template if:false={boolValue}>
+            <lightning-button label="SHOW FORM" onclick={showFormHandler}></lightning-button>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card label="TIME COUNTER WIDGET" icon-name="custom:custom29">
+        <div style="font-size: 20px;text-align:center">{timeVal}</div>
+        <br><br>
+
+        <template if:true={showStartButton}>
+            <lightning-button label="Start" style="margin-left: 100px;" onclick={startTimerHandler}></lightning-button>
+        </template>
+        <template if:false={showStartButton}>
+            <lightning-button label="Stop" style="margin-left: 100px;" onclick={stopTimerHandler}></lightning-button>
+        </template> 
+        <lightning-button label="Reset" variant="brand" style="margin-left: 100px;" onclick={resetTimeHandler}></lightning-button>
+    </lightning-card>
+    
+</template>

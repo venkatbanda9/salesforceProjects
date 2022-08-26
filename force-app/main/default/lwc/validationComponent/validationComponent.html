@@ -1,0 +1,15 @@
+<template>
+    
+    <lightning-card title="Validation Component Test" style = "text-align: center;" icon-name="custom:custom30">
+    
+        <lightning-input class = "nameVar" label="Enter name" type="string" value={nameValue}></lightning-input>
+        <br><br>
+        <lightning-input class="dateVar" label="Enter date" type="date" value={dateValue}></lightning-input>
+        <br><br>
+        <lightning-button label="click to Validate" onclick={validateHandler}></lightning-button>
+        
+            <lightning-button label="Reset" onclick={resetHandler}></lightning-button>
+       
+    </lightning-card>
+
+</template>

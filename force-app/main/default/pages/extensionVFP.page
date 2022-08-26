@@ -1,0 +1,23 @@
+<apex:page standardController="Account" extensions="EVCTest,ExtensionVFPController">
+    <apex:form >
+    	
+        <apex:pageBlock title="Page Block 1 | custom controller to display txt">
+            <apex:pageBlockSection title="PageBlock Section1 custom controller to display txt" columns="2">
+    			<apex:pageBlockSectionItem ><apex:commandButton value="Greet" Action="{!handleClickGreet}" /></apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ><apex:outputLabel > {!dispMsg} </apex:outputLabel></apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+		</apex:pageBlock>
+        <apex:pageBlock title="Page Block 2 | std controller to save data">
+        	<apex:pageBlockSection title="Page Block 2 | std controller to save data" columns="2">
+                <apex:pageBlockSectionItem >Enter Company Name: <apex:inputField value="{!Account.name}" required="false"/></apex:pageBlockSectionItem>
+    			<apex:pageBlockSectionItem ><apex:commandButton value="save" Action="{!save}" /></apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock title="Page Block 3 | custom controller to save data">
+        	<apex:pageBlockSection title="Page Block 3 | custom controller to save data" columns="2">
+                <apex:pageBlockSectionItem >Enter Company Name: <apex:inputText value="{!compValue}"/></apex:pageBlockSectionItem>
+    			<apex:pageBlockSectionItem ><apex:commandButton value="save" Action="{!handleSave}" /></apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
