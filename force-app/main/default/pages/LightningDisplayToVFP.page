@@ -1,0 +1,15 @@
+<apex:page >
+    <apex:includeLightning />
+
+    <div id="lightning" />
+
+    <script>
+        $Lightning.use("c:FetchAndDisplayAccountListApp", function() {
+          $Lightning.createComponent("c:FetchAndDisplayAccountListcomponent",{},'lightning',
+                                    function(cmp) {
+                console.log("button was created");
+                // do some stuff
+              });
+        });
+    </script>
+</apex:page>
